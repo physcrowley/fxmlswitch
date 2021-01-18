@@ -12,4 +12,4 @@ Les buts pédagogiques sont :
 
   * la portée des variables (méthode vs classe, classe vs package)
   
-  * utilisation des objets des champs et méthodes d'une `class` dans d'autres classes
+  * utilisation des champs et des méthodes d'une `class` dans d'autres classes
