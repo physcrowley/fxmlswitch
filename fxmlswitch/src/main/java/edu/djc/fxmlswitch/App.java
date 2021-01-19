@@ -25,7 +25,7 @@ public class App extends Application {
     }
     
     // TODO 2 explain why we need this method instead of just calling
-    // 		setRoot() directly on scene
+    // 		setRoot(Parent root) directly on scene in the start() method
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
     }
