@@ -30,14 +30,18 @@ public class App extends Application {
         scene.setRoot(loadFXML(fxml));
     }
     
-    // TODO 0 explain what FXMLLoader does and why it `throws IOException`
-    
-    // TODO 1 explain why these two lines are in a method instead of
-    //		directly as commands before stage.setScene() in start()
     private static Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         return fxmlLoader.load();
     }
+    // Q: what FXMLLoader does and why it `throws IOException`
+    // A: because the method tries to open a file
+    
+    // Q: why these two lines are in a method instead of
+    //		directly as commands before stage.setScene() in start()
+    // A: because the code is used in 2 different spots : start() and setRoot()
+    //		and a method prevents copying and pasting code that needs to be
+    //		reused in multiple places
 
     public static void main(String[] args) {
         launch();
