@@ -1,0 +1,18 @@
+.root {
+	-fx-background-color: red;
+	-fx-font-family: 'monospace';
+	-fx-spacing: 20;
+}
+
+/* 
+.label {
+	-fx-background-color: blue;
+	-fx-padding: 50;
+}
+*/
+
+/* 
+.button {
+	-fx-font-family: 'sans-serif';
+}
+*/
