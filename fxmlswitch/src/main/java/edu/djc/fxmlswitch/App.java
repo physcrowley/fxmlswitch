@@ -30,8 +30,11 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 640, 480);
-        stage.setScene(scene);
+    	scene = new Scene(loadFXML("primary"), 640, 480);
+    	scene.getStylesheets().add("app.css");
+    	//scene.getStylesheets().add(App.class.getResource("app.css").toExternalForm());
+    	//scene.getStylesheets().add(this.getClass().getResource("app.css").toExternalForm());
+    	stage.setScene(scene);
         stage.show();
     }
     
