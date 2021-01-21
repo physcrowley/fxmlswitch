@@ -13,7 +13,8 @@ import java.io.IOException;
  */
 public class App extends Application {
 
-    /* Q : why our Scene is a class field and not 
+	private static Scene scene;
+	/* Q : why our Scene is a class field and not 
      * 		a method variable
 	 * A : So it can be visible to ALL this class' methods without
 	 * 		being passed as a parameter. This is critical, because we
@@ -26,7 +27,6 @@ public class App extends Application {
 	 * 		App.scene.setRoot(App.loadFXML("primary"))... which is uglier
 	 * 		anyway.
 	*/
-	private static Scene scene;
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -38,13 +38,15 @@ public class App extends Application {
         stage.show();
     }
     
+    
+    static void setRoot(String fxml) throws IOException {
+        scene.setRoot(loadFXML(fxml));
+    }
     // Q : why we need this method instead of just calling
     // 		setRoot(Parent root) directly on scene in the start() method
     // A : because this method is called statically (using the class name instead
     //		of using an objet) in both PrimaryController and SecondaryController
-    static void setRoot(String fxml) throws IOException {
-        scene.setRoot(loadFXML(fxml));
-    }
+    
     
     private static Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
