@@ -40,6 +40,7 @@ public class App extends Application {
     	
     	// works using the current class as a reference point and 
     	// .toExternalForm() to generate a valid file path
+    	//scene.getStylesheets().add(App.class.getResource("app.css").toExternalForm());
     	scene.getStylesheets().add(this.getClass().getResource("app.css").toExternalForm());
     	//System.out.println(this.getClass());
     	//System.out.println(this.getClass().getResource("app.css").toExternalForm());

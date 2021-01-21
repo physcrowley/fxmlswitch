@@ -1,24 +1,25 @@
+/* applies to all elements of the Scene Graph */
 .root {
-	-fx-background-color: red;
+	-fx-background-color: pink;
 	-fx-font-family: 'monospace';
 	-fx-spacing: 20;
+	/* -fx-padding: 100; */ /* does not seem to apply to children */
 }
 
-/* 
+/* applies to all Label objects in the Scene Graph */
 .label {
 	-fx-background-color: blue;
+	-fx-text-fill: white;
 	-fx-padding: 50;
 }
-*/
 
-/* 
+
+/* applies to all Button objects in the Scene Graph */
 .button {
 	-fx-font-family: 'sans-serif';
 }
-*/
 
-/*
+/* applies only to control named primaryButton (in the primary.fxml file) */
 #primaryButton {
 	-fx-font-size: 20;
 }
- */
